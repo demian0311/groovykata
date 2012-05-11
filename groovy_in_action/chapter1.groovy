@@ -24,4 +24,16 @@ println("----")
 // lots of power in this expression
 (classes.package.name).each{println it}
 
+[1, 2, 4, 5, 6].each{println it}
+
+def sum = 0
+[1, 2, 4, 5, 6].each{sum += it}
+println "the sum is: " + sum
+
+// Page12: XML handling
+def customers = new XmlSlurper().parse(new File('customers.xml'))
+for (customer in customers.corporate.customer){
+   println "${customer.@name} works for ${customer.@company}"
+}
+
 
