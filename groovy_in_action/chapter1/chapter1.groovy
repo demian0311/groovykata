@@ -36,4 +36,9 @@ for (customer in customers.corporate.customer){
    println "${customer.@name} works for ${customer.@company}"
 }
 
+// Page13: Scripting the web
+// doesn't work, the service is down
+//def text = "http://azarask.in/services/rhyme/?q=movie".toURL().text 
+//for (rhyme in evaluate(text)) println rhyme
+
 
